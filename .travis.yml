@@ -17,7 +17,7 @@ before_install:
 install:
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
   - echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-  - export PATH=$PATH:$HOME/linuxbrew/.linuxbrew/bin
+  - export PATH=$PATH:home/linuxbrew/.linuxbrew/bin
 
 script:
   - brew install https://github.com/artur-barsegyan/tarantool-lsp/raw/impl-cli-tools/tarantoollsp.rb --HEAD
