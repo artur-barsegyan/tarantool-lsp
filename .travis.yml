@@ -25,7 +25,7 @@ install:
   - brew update || true
 
 script:
-  - brew install https://github.com/artur-barsegyan/tarantool-lsp/raw/impl-cli-tools/tarantoollsp.rb --HEAD
+  - brew install https://github.com/artur-barsegyan/tarantool-lsp/raw/impl-cli-tools-dev/tarantoollsp.rb --HEAD
   - tarantool-lsp docs init
   - tarantool-lsp docs update
 
