@@ -22,9 +22,9 @@ install:
   - export MANPATH=$LINUXBREWHOME/man:$MANPATH
   - export PKG_CONFIG_PATH=$LINUXBREWHOME/lib64/pkgconfig:$LINUXBREWHOME/lib/pkgconfig:$PKG_CONFIG_PATH
   - export LD_LIBRARY_PATH=$LINUXBREWHOME/lib64:$LINUXBREWHOME/lib:$LD_LIBRARY_PATH
+  - brew update || true
 
 script:
-  - brew update
   - brew install https://github.com/artur-barsegyan/tarantool-lsp/raw/impl-cli-tools/tarantoollsp.rb --HEAD
   - tarantool-lsp docs init
   - tarantool-lsp docs update
