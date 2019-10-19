@@ -10,6 +10,10 @@ class Tarantoollsp < Formula
 	depends_on "wget"
 	depends_on "gcc"
 
+  	def installed?
+	    true
+  	end
+
 	def install
 		system "wget", "https://github.com/sqmedeiros/lpeglabel/archive/v1.5.0-1.tar.gz"
 		system "tar", "-xzf", "v1.5.0-1.tar.gz"
