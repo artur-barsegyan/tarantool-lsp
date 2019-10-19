@@ -1,6 +1,10 @@
 language: bash
 dist: xenial
 
+env:
+  - TARANTOOL_VERSION=1.10
+  - TARANTOOL_VERSION=2x
+
 # tarantool
 before_install:
   - curl http://download.tarantool.org/tarantool/$TARANTOOL_VERSION/gpgkey | sudo apt-key add -
@@ -21,4 +25,5 @@ script:
   - brew install https://github.com/artur-barsegyan/tarantool-lsp/raw/impl-cli-tools/tarantoollsp.rb --HEAD
   - tarantool-lsp docs init
   - tarantool-lsp docs update
-  - 
+
+
